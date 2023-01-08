@@ -5,4 +5,4 @@ services:
 before_install:
   - docker build -t mrmtn/docker-react  -f Dockerfile.dev .
 script:
-  - docker run mrmtn/docker-react npm run test -- --coverage
+  - docker run CI=true mrmtn/docker-react npm run test -- --coverage
